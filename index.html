@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="description" content="Centreytell.com is a modern independent record label founded by Messiah Quinn. Discover innovative music, artist development, and new releases.">
+  <meta name="keywords" content="record label, centreytell, Messiah Quinn, independent music, Spotify label, music submissions">
+  <meta name="author" content="Messiah Quinn / Centreytell">
+  <meta property="og:title" content="Centreytell · Independent Record Label">
+  <meta property="og:description" content="Official website of Centreytell, owned by Messiah Quinn. Curated sounds, artist-first vision.">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <title>Centreytell</title>
+  <!-- Google Fonts + Modern CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (Free CDN) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #ffffff;
+      color: #111827;
+      line-height: 1.5;
+      scroll-behavior: smooth;
+    }
+
+    .container {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 32px;
+    }
+
+    /* Header & Navigation */
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid #eaeef2;
+      z-index: 100;
+      padding: 18px 0;
+    }
+
+    .nav-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .logo a {
+      text-decoration: none;
+      font-size: 1.7rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0a0c10;
+    }
+    .logo span {
+      font-weight: 500;
+      color: #3b3f46;
+    }
+    .logo .dot {
+      color: #2563eb;
+      font-weight: 700;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: #1f2937;
+      transition: color 0.2s ease;
+    }
+    .nav-links a:hover {
+      color: #2563eb;
+    }
+
+    /* Buttons */
+    .btn-primary {
+      display: inline-block;
+      background-color: #111827;
+      color: white;
+      padding: 10px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.25s ease;
+      border: 1px solid #111827;
+    }
+    .btn-primary:hover {
+      background-color: #2563eb;
+      border-color: #2563eb;
+      transform: translateY(-2px);
+    }
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: #111827;
+      border: 1px solid #cbd5e1;
+      padding: 10px 24px;
+      border-radius: 40px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.9rem;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover {
+      border-color: #2563eb;
+      color: #2563eb;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 0 70px;
+      text-align: center;
+    }
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      color: #0a0c10;
+      line-height: 1.2;
+      margin-bottom: 20px;
+    }
+    .hero .highlight {
+      color: #2563eb;
+      border-bottom: 2px solid #2563eb;
+      display: inline-block;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #4b5563;
+      max-width: 650px;
+      margin: 0 auto 32px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Sections */
+    section {
+      padding: 70px 0;
+      border-bottom: 1px solid #f0f2f5;
+    }
+    .section-title {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+      color: #0f172a;
+    }
+    .section-sub {
+      color: #4b5563;
+      max-width: 700px;
+      margin-bottom: 48px;
+      font-size: 1rem;
+    }
+
+    /* About Grid */
+    .about-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 48px;
+      align-items: flex-start;
+    }
+    .about-text {
+      flex: 2;
+    }
+    .about-text p {
+      margin-bottom: 20px;
+      color: #2d3a4a;
+      font-size: 1rem;
+    }
+    .owner-card {
+      flex: 1;
+      background: #f8fafc;
+      padding: 28px 24px;
+      border-radius: 24px;
+      border: 1px solid #e9edf2;
+    }
+    .owner-card h3 {
+      font-size: 1.3rem;
+      font-weight: 600;
+      margin-bottom: 12px;
+    }
+    .owner-card .owner-name {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #111827;
+      margin: 8px 0 4px;
+    }
+    .owner-card .role {
+      color: #2563eb;
+      font-weight: 500;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    /* Releases Grid */
+    .releases-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 32px;
+      margin-top: 16px;
+    }
+    .release-card {
+      background: #ffffff;
+      border-radius: 24px;
+      overflow: hidden;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.02), 0 1px 2px rgba(0, 0, 0, 0.05);
+      border: 1px solid #edf2f7;
+    }
+    .release-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 20px 30px -12px rgba(0, 0, 0, 0.08);
+      border-color: #e0e7ef;
+    }
+    .art-placeholder {
+      background: linear-gradient(135deg, #e6f0ff 0%, #d9e6ff 100%);
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 2rem;
+      color: #2563eb;
+    }
+    .release-info {
+      padding: 20px 20px 24px;
+    }
+    .release-info h4 {
+      font-size: 1.2rem;
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .artist {
+      font-size: 0.85rem;
+      color: #5b6e8c;
+      margin-bottom: 12px;
+      font-weight: 500;
+    }
+    .listen-link {
+      font-size: 0.85rem;
+      font-weight: 500;
+      color: #2563eb;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .listen-link i {
+      font-size: 0.75rem;
+    }
+
+    /* Contact Section */
+    .contact-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 50px;
+    }
+    .contact-details {
+      flex: 1;
+    }
+    .contact-details .info-item {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+    .info-item i {
+      width: 36px;
+      height: 36px;
+      background: #f1f5f9;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      color: #2563eb;
+      font-size: 1.1rem;
+    }
+    .info-item p {
+      font-weight: 500;
+    }
+    .info-item a {
+      color: #111827;
+      text-decoration: none;
+      border-bottom: 1px dotted #cbd5e1;
+    }
+    .social-links {
+      display: flex;
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .social-links a {
+      color: #4a5a72;
+      font-size: 1.5rem;
+      transition: color 0.2s;
+    }
+    .social-links a:hover {
+      color: #2563eb;
+    }
+
+    .contact-form {
+      flex: 1;
+      background: #fafcff;
+      border-radius: 28px;
+      padding: 28px;
+      border: 1px solid #eef2f8;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group input, .form-group textarea {
+      width: 100%;
+      padding: 14px 18px;
+      font-family: 'Inter', sans-serif;
+      border: 1px solid #e2e8f0;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      background: white;
+      transition: 0.2s;
+    }
+    .form-group input:focus, .form-group textarea:focus {
+      outline: none;
+      border-color: #2563eb;
+      box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    }
+    .contact-form button {
+      background: #111827;
+      color: white;
+      border: none;
+      padding: 12px 26px;
+      border-radius: 40px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.2s;
+      font-size: 0.9rem;
+    }
+    .contact-form button:hover {
+      background: #2563eb;
+    }
+
+    /* Footer */
+    footer {
+      padding: 48px 0 40px;
+      background-color: #fafbfd;
+      border-top: 1px solid #eef2f8;
+      text-align: center;
+    }
+    .footer-content p {
+      color: #4a5568;
+      font-size: 0.85rem;
+      margin: 6px 0;
+    }
+    .footer-owner {
+      font-weight: 600;
+      color: #0f172a;
+      margin-top: 12px;
+    }
+
+    /* Utility */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 24px;
+      }
+      .hero h1 {
+        font-size: 2.4rem;
+      }
+      .section-title {
+        font-size: 1.8rem;
+      }
+      .nav-links {
+        gap: 20px;
+      }
+      .nav-container {
+        flex-direction: column;
+        align-items: center;
+      }
+      .releases-grid {
+        gap: 24px;
+      }
+    }
+    @media (max-width: 480px) {
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+      .btn-primary, .btn-outline {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <div class="container nav-container">
+    <div class="logo">
+      <a href="#">centreytell<span>.com</span><span class="dot">®</span></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#releases">Releases</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main>
+  <!-- Hero / Home -->
+  <section id="home">
+    <div class="container hero">
+      <h1>Defining tomorrow’s <span class="highlight">sound</span><br>with vision & purpose.</h1>
+      <p>Centreytell is an independent label built for artists, curators, and culture. Founded by Messiah Quinn, we champion bold creativity and authentic storytelling.</p>
+      <div class="hero-buttons">
+        <a href="#releases" class="btn-primary"><i class="fas fa-headphones" style="margin-right: 8px;"></i>Discover music</a>
+        <a href="#contact" class="btn-outline"><i class="fas fa-paper-plane"></i> Submit demo</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section + owner highlight -->
+  <section id="about">
+    <div class="container">
+      <h2 class="section-title">About the label</h2>
+      <div class="about-grid">
+        <div class="about-text">
+          <p><strong>Centreytell.com</strong> is a next‑generation record label bridging independent artistry and global discovery. We focus on genre-expansive music — from alternative electronic to modern indie, experimental pop, and beyond.</p>
+          <p>With a curator’s ear and an artist-first philosophy, Centreytell provides distribution, strategic playlisting, and creative development. Our mission is to elevate voices that challenge conventions and resonate deeply with listeners worldwide.</p>
+          <p>Since our launch, we have partnered with Spotify for Artists, digital stores, and sync licensing to ensure our roster reaches the right audiences. The label is proud to be fully owned and operated by Messiah Quinn — a passionate A&R, producer, and music executive.</p>
+          <p><i class="fas fa-check-circle" style="color: #2563eb;"></i>  Digital distribution & pitch support &nbsp;&nbsp; <i class="fas fa-chart-line" style="color: #2563eb;"></i>  Royalty transparency</p>
+        </div>
+        <div class="owner-card">
+          <i class="fas fa-crown" style="font-size: 1.8rem; color: #2563eb; margin-bottom: 10px; display: inline-block;"></i>
+          <h3>Label ownership</h3>
+          <div class="owner-name">Messiah Quinn</div>
+          <div class="role">Founder & Executive Director</div>
+          <hr style="margin: 16px 0; border-color:#e2e8f0;">
+          <p style="font-size: 0.85rem; margin-bottom: 4px;"><i class="fas fa-map-pin"></i> New York / LA</p>
+          <p style="font-size: 0.85rem;"><i class="fas fa-globe"></i> centreytell.com — established 2022</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Releases / Catalog : Essential for Spotify credibility -->
+  <section id="releases">
+    <div class="container">
+      <h2 class="section-title">Recent & upcoming releases</h2>
+      <p class="section-sub">Our curated catalog — fresh sounds distributed worldwide via Spotify, Apple Music, and more.</p>
+      <div class="releases-grid">
+        <!-- Release 2 -->
+        <div class="release-card">
+          <div class="art-placeholder">
+            <i class="fas fa-record-vinyl" style="font-size: 3rem; opacity: 0.8;"></i>
+          </div>
+          <div class="release-info">
+            <h4>Batman</h4>
+            <div class="artist">messiah</div>
+            <a href="https://open.spotify.com/track/7Gor9zOZWcUEAs5Y8pDPVT?si=c84a58a24f814408" class="listen-link"><i class="fab fa-spotify"></i> Listen on Spotify</a>
+          </div>
+        </div>
+               <div class="release-card">
+          <div class="art-placeholder">
+            <i class="fas fa-record-vinyl" style="font-size: 3rem; opacity: 0.8;"></i>
+          </div>
+          <div class="release-info">
+            <h4>saveme</h4>
+            <div class="artist">Jordan Kirkwood</div>
+            <a href="https://open.spotify.com/track/35nd0Z1h5CzcaJcvDrXmme?si=859e24984ecd4db8" class="listen-link"><i class="fab fa-spotify"></i> Listen on Spotify</a>
+          </div>
+        </div>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 48px;">
+        <a href="https://open.spotify.com/user/31fmkzc2izp2ai7xzde2oq7wh3yi?si=0626ca5e935441db" class="btn-outline" style="border-radius: 40px;"><i class="fab fa-spotify"></i> Follow centreytell on Spotify</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact + Demo Submission Area -->
+  <section id="contact">
+    <div class="container">
+      <h2 class="section-title">Connect & Submissions</h2>
+      <div class="contact-wrapper">
+        <div class="contact-details">
+          <div class="info-item">
+            <i class="fas fa-envelope"></i>
+            <p><strong>General inquiries</strong><br><a href="mailto:info@centreytell.com">info@centreytell.com</a></p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-music"></i>
+            <p><strong>Demo submissions</strong><br><a href="mailto:demos@centreytell.com">demos@centreytell.com</a><br><span style="font-size: 0.75rem; color: #5f6c84;">(Streaming links + bio required)</span></p>
+          </div>
+          <div class="info-item">
+            <i class="fas fa-phone-alt"></i>
+            <p><strong>A&R / bookings</strong><br>+1 (317) 207 0526 <span style="font-size: 0.7rem;">(by appointment)</span></p>
+          </div>
+        </div>
+        <!-- Simple Contact Form for demo / message (Simulated) -->
+        <div class="contact-form">
+          <h3 style="font-weight: 600; margin-bottom: 16px;"><i class="fas fa-pen-fancy"></i> Send demo or message</h3>
+          <form id="demoForm">
+            <div class="form-group">
+              <input type="text" id="name" placeholder="Artist / Full name *" required>
+            </div>
+            <div class="form-group">
+              <input type="email" id="email" placeholder="Email address *" required>
+            </div>
+            <div class="form-group">
+              <textarea rows="4" id="message" placeholder="Tell us about your music / attach Spotify link or demo reference..." required></textarea>
+            </div>
+            <button type="submit" id="submitBtn"><i class="fas fa-cloud-upload-alt"></i> Submit demo</button>
+            <p style="font-size: 0.7rem; color: #6c757d; margin-top: 14px;">We respond within 5-7 business days. No attachments, please share streaming links.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container footer-content">
+    <p>© 2026 <strong>centreytell.com</strong> — All rights reserved</p>
+    <p class="footer-owner">Owned & operated by <strong>Messiah Quinn</strong></p>
+  </div>
+</footer>
+
+<!-- Simple JavaScript Form Simulation (No backend but professional alert) -->
+<script>
+  (function() {
+    const form = document.getElementById('demoForm');
+    if (form) {
+      form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const nameField = document.getElementById('name');
+        const emailField = document.getElementById('email');
+        const msgField = document.getElementById('message');
+        if (nameField.value.trim() === '' || emailField.value.trim() === '' || msgField.value.trim() === '') {
+          alert('Please fill in all fields before submitting your demo.');
+          return;
+        }
+        if (!emailField.value.includes('@')) {
+          alert('Please provide a valid email address.');
+          return;
+        }
+        // Simulated successful submission
+        alert(`✨ Thanks ${nameField.value.trim()}! Your demo has been sent to centreytell A&R. We'll get back to you soon.`);
+        form.reset();
+      });
+    }
+    // smooth internal nav
+    document.querySelectorAll('.nav-links a, .hero-buttons a[href^="#"], .btn-primary[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function(e) {
+        const hash = this.getAttribute('href');
+        if (hash && hash !== '#' && hash.startsWith('#')) {
+          e.preventDefault();
+          const targetId = hash.substring(1);
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }
+      });
+    });
+  })();
+</script>
+</body>
+</html>
